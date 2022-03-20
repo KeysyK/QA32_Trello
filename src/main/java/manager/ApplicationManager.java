@@ -13,14 +13,15 @@ public class ApplicationManager {
 
 
     public void init(){
-        userHelper = new UserHelper(wd);
-
         ChromeOptions chromeOptions = new ChromeOptions();
         WebDriverManager.chromedriver().setup();
         wd = new ChromeDriver();
         wd.manage().window().maximize();
         wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        wd.navigate().to("https://trello.com/\n");
+        wd.navigate().to("https://trello.com/");
+
+        userHelper = new UserHelper(wd);
+        //userHelper.fillLoginForm("keysy9696@gmai.com", "keysy1234*");
     }
     public void stop(){
         //wd.close();

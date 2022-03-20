@@ -1,8 +1,10 @@
 package tests;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+//import org.slf4j.impl.StaticLoggerBinder;
+
+
 
 public class Login extends TestBase{
 
@@ -22,8 +24,12 @@ public class Login extends TestBase{
         app.getUserHelper().isLoggedSuccess();
 
         //assert [data-test-id='data-test-id']
-
     }
+    //public void loginWithEmptyPassword(){
+        //app.getUserHelper().initLogin();
+        //app.getUserHelper().fillLoginForm("keysy9696@gmail.com"; " ");
+
+    //}
 
 
 
